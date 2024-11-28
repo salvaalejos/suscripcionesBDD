@@ -7,7 +7,7 @@ package Views.Client_Views;
 import Models.*;
 import Models.Entities.*;
 import Utilities.Paths;
-import Views.Admin_Views.ChooseSubscription;
+import Views.ChooseSubscription;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -67,6 +67,7 @@ public class HomeClientPanel extends javax.swing.JPanel {
             this.plan = modelSubscriptionPlan.byId(subscription.getSubscriptionPlan());
             updateUI();
         } catch (Exception e){
+            System.out.println("Error al leer los datos");
             e.printStackTrace();
         }
     }
@@ -456,12 +457,12 @@ public class HomeClientPanel extends javax.swing.JPanel {
             return;
         }
 
-        subscription.setStart_date(LocalDate.now().toString());
-        subscription.setEnd_date(LocalDate.parse(subscription.getEnd_date()).plusMonths(1).toString());
-        Payment payment = new Payment(null, subscription.getId_subscription(), plan.getPrice(), LocalDate.now().toString());
+        this.subscription.setStart_date(LocalDate.now().toString());
+        this.subscription.setEnd_date(LocalDate.parse(subscription.getEnd_date()).plusMonths(1).toString());
+        Payment payment = new Payment(null, subscription.getId_subscription(), plan.getPrice(), this.subscription.getStart_date());
         /////////////////////////////////
-        addPayment(payment);
         saveSubscriptions();
+        addPayment(payment);
         ////////////////////////////////
         loadLbls();
         updateUI();
@@ -471,7 +472,7 @@ public class HomeClientPanel extends javax.swing.JPanel {
     private void loadLbls(){
         readData();
         if(subscription == null) {
-            lblPlan.setText("No tienes un plan activo");
+            lblPlan.setText("No tienes un plan o suscripción activos");
             lblDaysToPay.setText("No tienes un plan activo");
             return;
         }
@@ -512,7 +513,7 @@ public class HomeClientPanel extends javax.swing.JPanel {
 
     private void saveSubscriptions(){
         try {
-            modelSubscription.update(subscription);
+            modelSubscription.update(this.subscription);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -525,7 +526,6 @@ public class HomeClientPanel extends javax.swing.JPanel {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        readData();
     }
 
 

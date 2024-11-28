@@ -22,7 +22,7 @@ public class ModelSubscription {
     public Subscription byUser(Integer idUser) throws Exception {
         Subscription s = null;
 
-        String sql = "SELECT * FROM subscription WHERE User_idUser = ?";
+        String sql = "SELECT * FROM subscription WHERE User_idUser = ? LIMIT 1";
         db.open();
         PreparedStatement pstmt = db.getCon().prepareStatement(sql);
         pstmt.setInt(1, idUser);

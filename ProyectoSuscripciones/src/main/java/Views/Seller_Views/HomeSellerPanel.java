@@ -272,7 +272,7 @@ public class HomeSellerPanel extends javax.swing.JPanel {
 
     private void btnChangeSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeSucursalActionPerformed
         // TODO add your handling code here:
-        new Register(seller).setVisible(true);
+        new Register(seller, this).setVisible(true);
     }//GEN-LAST:event_btnChangeSucursalActionPerformed
 
 

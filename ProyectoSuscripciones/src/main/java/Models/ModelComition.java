@@ -21,7 +21,7 @@ public class ModelComition {
     }
 
     public void addComition(Comition comition) throws Exception {
-        String sql = "INSERT INTO comition (Subscription_idSubscription, amount, date, User_idSeller) VALUES (?,?,?,?);";
+        String sql = "INSERT INTO comition (Subscription_idSubscription, amount, comition_date, User_idSeller) VALUES (?,?,?,?);";
 
         db.open();
         PreparedStatement pstmt = db.getCon().prepareStatement(sql);

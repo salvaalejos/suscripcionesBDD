@@ -223,8 +223,9 @@ public class SellerControlPanel extends javax.swing.JPanel {
     private void btnChangeSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeSucursalActionPerformed
         // TODO add your handling code here:
         try {
-            Integer idSucursal = sucursalSelector.getSelectedIndex();
-            Sucursal sucursal = modelSucursal.byId(idSucursal);
+            
+            Sucursal sucursal = (Sucursal) sucursalSelector.getSelectedItem();
+            Integer idSucursal = sucursal.getIdSucursal();
 
             User seller = selectedSeller();
             seller.setSucursal(idSucursal);
@@ -277,6 +278,6 @@ public class SellerControlPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JComboBox<String> sucursalSelector;
+    private javax.swing.JComboBox<Sucursal> sucursalSelector;
     // End of variables declaration//GEN-END:variables
 }

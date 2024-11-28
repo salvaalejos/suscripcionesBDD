@@ -1,7 +1,7 @@
 package Models.Entities;
 
 public class Comition {
-    private int id_comition;
+    private Integer id_comition;
     private Integer seller;
     private Integer subscription;
     private Double amount;
@@ -23,11 +23,11 @@ public class Comition {
         this.comition_date = comition_date;
     }
 
-    public int getId_comition() {
+    public Integer getId_comition() {
         return id_comition;
     }
 
-    public void setId_comition(int id_comition) {
+    public void setId_comition(Integer id_comition) {
         this.id_comition = id_comition;
     }
 

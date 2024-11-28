@@ -286,7 +286,7 @@ public class SellerControlFrame extends javax.swing.JFrame {
 
     private void btnNewAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewAdminActionPerformed
         // TODO add your handling code here:
-        new Register(seller).setVisible(true);
+        new Register(seller, new HomeSellerPanel()).setVisible(true);
     }//GEN-LAST:event_btnNewAdminActionPerformed
 
     private void btnUnlogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnlogActionPerformed

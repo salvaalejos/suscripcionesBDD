@@ -21,7 +21,7 @@ public class ModelUser {
     }
 
     public User login(String usr, String pass) throws Exception {
-        String sql = "SELECT * FROM user WHERE username=? AND password=SHA1(?)";
+        String sql = "SELECT * FROM user WHERE username=? AND password=SHA1(?) LIMIT 1";
 
         User u = null;
 
@@ -33,6 +33,7 @@ public class ModelUser {
 
         ResultSet rs = pstmt.executeQuery();
         if(rs.next()) {
+
             u = new User();
             u.setId_user(rs.getInt(ID_USER));
             u.setUsername(rs.getString(USERNAME));
@@ -41,6 +42,8 @@ public class ModelUser {
             u.setUser_type(rs.getInt(USER_TYPE));
             u.setPhone(rs.getString(PHONE));
             u.setStatus(rs.getBoolean(STATUS));
+            u.setEmail(rs.getString(EMAIL));
+            u.setSucursal(rs.getInt(ID_SUCURSAL));
 
         }
         rs.close();
@@ -200,7 +203,7 @@ public class ModelUser {
     public ArrayList<User> getSellers() throws Exception {
         ArrayList<User> users = new ArrayList<>();
 
-        String sql = "SELECT * FROM user WHERE user_type = 2";
+        String sql = "SELECT * FROM user WHERE user_type = 3";
         db.open();
 
         ResultSet rs = db.getStm().executeQuery(sql);
@@ -254,7 +257,7 @@ public class ModelUser {
     public ArrayList<User> getClients() throws Exception {
         ArrayList<User> users = new ArrayList<>();
 
-        String sql = "SELECT * FROM user WHERE user_type = 3";
+        String sql = "SELECT * FROM user WHERE user_type = 2";
         db.open();
 
         ResultSet rs = db.getStm().executeQuery(sql);

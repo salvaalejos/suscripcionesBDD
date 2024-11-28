@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ce2654e8-19b3-4ab5-8659-95290decfce8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Entities/Comition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Entities/Comition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Entities/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Entities/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ModelComition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ModelComition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ModelSubscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ModelSubscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ModelUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ModelUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/ChooseSubscription.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/ChooseSubscription.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/ChooseSubscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/ChooseSubscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/ClientControlPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/ClientControlPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/ClientControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/ClientControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SellerControlPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SellerControlPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SellerControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SellerControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SubscriptionControlPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SubscriptionControlPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SubscriptionControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SubscriptionControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SubscriptionPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/SubscriptionPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Admin_Views/SubscriptionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/SubscriptionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Client_Views/ControlPanelClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Client_Views/ControlPanelClients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Client_Views/HomeClientPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Client_Views/HomeClientPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegisterGeneral.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegisterGeneral.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegisterGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegisterGeneral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Seller_Views/HomeSellerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Seller_Views/HomeSellerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Seller_Views/SellerControlFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Seller_Views/SellerControlFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/proyectosuscripciones/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/proyectosuscripciones/ServerFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Entities/Comition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Entities/Comition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Entities/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Entities/Subscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/ModelComition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/ModelComition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/ModelSubscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/ModelSubscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/ModelUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/ModelUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/ChooseSubscription$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/ChooseSubscription$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/ChooseSubscription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/ClientControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Admin_Views/ClientControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/SellerControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Admin_Views/SellerControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/SubscriptionControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Admin_Views/SubscriptionControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/SubscriptionPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Admin_Views/SubscriptionPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/ControlPanelClients.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/HomeClientPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/HomeClientPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/HomeClientPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/HomeClientPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Client_Views/HomeClientPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Client_Views/HomeClientPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Register$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Register$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Register$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Register$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Register$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Register$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Register$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Register$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Register$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Register$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/RegisterGeneral$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/RegisterGeneral$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/RegisterGeneral.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/RegisterGeneral.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Seller_Views/HomeSellerPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Seller_Views/HomeSellerPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Seller_Views/SellerControlFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Seller_Views/SellerControlFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/ServerFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/ServerFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/ServerFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/ServerFrame$HiloLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/ServerFrame$HiloRegister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/proyectosuscripciones/ServerFrame.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2pSP7I32WkWRpYPC5H3m0ZLPHds" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.proyectosuscripciones.ProyectoSuscripciones" />
+      <module name="ProyectoSuscripciones" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce2654e8-19b3-4ab5-8659-95290decfce8" name="Changes" comment="" />
+      <created>1732756336067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732756336067</updated>
+      <workItem from="1732756338434" duration="2935000" />
+      <workItem from="1732760114586" duration="1685000" />
+      <workItem from="1732762519220" duration="872000" />
+      <workItem from="1732763539529" duration="1714000" />
+      <workItem from="1732765291542" duration="131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -264,12 +264,10 @@ public class RegisterGeneral extends javax.swing.JFrame {
         boolean passwordMatch = password.equals(repeatPassword);
         String phone = fieldPhone.getText();
         String email = fieldEmail.getText();
-        Integer idSucursal;
 
         System.out.println("Password: " + password);
         System.out.println("Repeat Password: " + repeatPassword);
 
-        Sucursal sucursal;
         if(!Authentication.validateEmail(email)){
             lblError.setText("Por favor ingrese un email válido");
             lblError.setVisible(true);
@@ -314,11 +312,10 @@ public class RegisterGeneral extends javax.swing.JFrame {
                 break;
             case 2: // Usuario
                 try {
-                    idSucursal = sucursalSelector.getSelectedIndex();
-                    sucursal = new ModelSucursal().byId(idSucursal);
+                    Sucursal sucursal = (Sucursal) sucursalSelector.getSelectedItem();
                     lblError.setVisible(false);
                     User user = new User(null, name, username, phone, user_type, sucursal.getIdSucursal(), email, true, password);
-                    new ModelUser().registerAdmin(user);
+                    new ModelUser().register(user);
                     JOptionPane.showMessageDialog(null, "Usuario registrado con éxito");
 
                 } catch (Exception e) {
@@ -328,11 +325,10 @@ public class RegisterGeneral extends javax.swing.JFrame {
 
             case 3: // Vendedor
                 try {
-                    idSucursal = sucursalSelector.getSelectedIndex();
-                    sucursal = new ModelSucursal().byId(idSucursal);
+                    Sucursal sucursal = (Sucursal) sucursalSelector.getSelectedItem();
                     lblError.setVisible(false);
                     User seller = new User(null, name, username, phone, user_type, sucursal.getIdSucursal(), email, true, password);
-                    new ModelUser().registerAdmin(seller);
+                    new ModelUser().register(seller);
                     JOptionPane.showMessageDialog(null, "Vendedor registrado con éxito");
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -392,11 +388,11 @@ public class RegisterGeneral extends javax.swing.JFrame {
         sucursales.clear();
         sucursalSelector.removeAll();
         try {
-            sucursales = new ModelSucursal().getAll();
+            sucursales = new ModelSucursal().getActives();
 
             for(Sucursal sucursal : sucursales){
                 if(sucursal.isStatus()){
-                    sucursalSelector.addItem(sucursal.getNombre());
+                    sucursalSelector.addItem(sucursal);
                 }
                 
             }
@@ -466,7 +462,7 @@ public class RegisterGeneral extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblError;
     private org.edisoncor.gui.panel.PanelImage panelImage1;
-    private javax.swing.JComboBox<String> sucursalSelector;
+    private javax.swing.JComboBox<Sucursal> sucursalSelector;
     private javax.swing.JComboBox<String> userTypeSelector;
     // End of variables declaration//GEN-END:variables
 }

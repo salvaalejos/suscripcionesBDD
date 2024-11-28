@@ -94,7 +94,7 @@ public class SubscriptionControlPanel extends javax.swing.JPanel {
             sucursales = modelSucursal.getActives();
 
             for(Sucursal sucursal : sucursales){
-                sucursalSelector.addItem(sucursal.getNombre());
+                sucursalSelector.addItem(sucursal);
                 
             }
             sucursalSelector.updateUI();
@@ -296,7 +296,8 @@ public class SubscriptionControlPanel extends javax.swing.JPanel {
             String title = fieldTitle.getText();
             String description = fieldDescription.getText();
             Double price = (double) fieldPrice.getValue();
-            Integer idSucursal = sucursalSelector.getSelectedIndex();
+            Sucursal sucursal = (Sucursal) sucursalSelector.getSelectedItem();
+            Integer idSucursal = sucursal.getIdSucursal();
 
             if(title.isEmpty() || description.isEmpty()){
                 return;
@@ -357,6 +358,6 @@ public class SubscriptionControlPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JComboBox<String> sucursalSelector;
+    private javax.swing.JComboBox<Sucursal> sucursalSelector;
     // End of variables declaration//GEN-END:variables
 }

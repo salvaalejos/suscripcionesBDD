@@ -15,6 +15,8 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+import static Utilities.Paths.*;
+
 /**
  *
  * @author hfyh
@@ -26,20 +28,22 @@ public class ControlPanelClients extends javax.swing.JFrame {
      */
     private User user;
     private ModelUser modelUser = new ModelUser();
-    ImageIcon homeUnfocus = new ImageIcon(Paths.HOME_UNFOCUS);
-    ImageIcon homeFocus = new ImageIcon(Paths.HOME_FOCUS);
+
+    ImageIcon homeUnfocus = new ImageIcon(HOME_UNFOCUS);
+    ImageIcon homeFocus = new ImageIcon(HOME_FOCUS);
     
     public ControlPanelClients() {
         initComponents();
     }
+
     public ControlPanelClients(User user) {
         this.user = user;
         initComponents();
         panelControlContent.setLayout(new BorderLayout());
         setLocationRelativeTo(null);
-        logoImage.setIcon(new ImageIcon(Paths.PONY_LOGO));
-        btnHome.setIcon(new ImageIcon(Paths.HOME_UNFOCUS));
-        btnAccount.setIcon(new ImageIcon(Paths.USER_ICON));
+        logoImage.setIcon(new ImageIcon(PONY_LOGO));
+        btnHome.setIcon(new ImageIcon(HOME_UNFOCUS));
+        btnAccount.setIcon(new ImageIcon(USER_ICON));
         loadHomePanel();
     }
 

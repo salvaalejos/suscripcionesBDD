@@ -1,5 +1,5 @@
 
-package Views.Admin_Views;
+package Views;
 
 import Models.Entities.*;
 import Models.ModelComition;
@@ -7,6 +7,7 @@ import Models.ModelPayment;
 import Models.ModelSubscription;
 import Models.ModelUser;
 import Views.Client_Views.ControlPanelClients;
+import Views.Seller_Views.HomeSellerPanel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -29,8 +30,9 @@ public class SubscriptionPanel extends javax.swing.JPanel {
      * Creates new form SubscriptionPanel
      */
     private SubscriptionPlan plan;
-    private User user;
+    private User user = new User();
     private User seller = null;
+    private HomeSellerPanel sellerFrame = null;
     private JFrame parent;
     private ArrayList<Subscription> subscriptions = new ArrayList<Subscription>();
     private ArrayList<Comition> comitions = new ArrayList<Comition>();
@@ -52,7 +54,8 @@ public class SubscriptionPanel extends javax.swing.JPanel {
         showSubscriptions();
     }
 
-    SubscriptionPanel(SubscriptionPlan plan, User user, JFrame parent, User seller) {
+    SubscriptionPanel(SubscriptionPlan plan, User user, JFrame parent, User seller, HomeSellerPanel sellerFrame) {
+        this.sellerFrame = sellerFrame;
         this.seller = seller;
         this.plan = plan;
         this.user = user;
@@ -113,8 +116,11 @@ public class SubscriptionPanel extends javax.swing.JPanel {
 
         buttonRound1.setText("buttonRound1");
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(245, 245, 249));
 
+        jPanel2.setBackground(new java.awt.Color(51, 51, 255));
+
+        lblTitle.setBackground(new java.awt.Color(51, 102, 255));
         lblTitle.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -139,7 +145,7 @@ public class SubscriptionPanel extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        descriptionArea.setBackground(new java.awt.Color(204, 204, 204));
+        descriptionArea.setBackground(new java.awt.Color(245, 245, 249));
         descriptionArea.setColumns(20);
         descriptionArea.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         descriptionArea.setForeground(new java.awt.Color(0, 0, 0));
@@ -150,9 +156,11 @@ public class SubscriptionPanel extends javax.swing.JPanel {
         descriptionArea.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jScrollPane1.setViewportView(descriptionArea);
 
-        btnChoose.setBackground(new java.awt.Color(16, 163, 127));
+        btnChoose.setBackground(new java.awt.Color(0, 102, 255));
         btnChoose.setText("Escoger plan");
-        btnChoose.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnChoose.setColorBrillo(new java.awt.Color(204, 204, 204));
+        btnChoose.setColorDeSombra(new java.awt.Color(102, 102, 102));
+        btnChoose.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         btnChoose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnChooseActionPerformed(evt);
@@ -205,6 +213,10 @@ public class SubscriptionPanel extends javax.swing.JPanel {
     private void btnChooseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChooseActionPerformed
         // TODO add your handling code here:
         try {
+            if (user == null || plan == null) {
+                JOptionPane.showMessageDialog(this, "Usuario o plan no válido.");
+                return;
+            }
             int confirmar = JOptionPane.showConfirmDialog(null, "¿Estás seguro de que deseas contratar este plan?", "Confirmar", JOptionPane.YES_NO_OPTION);
             if (confirmar == JOptionPane.NO_OPTION) {
                 return;
@@ -213,10 +225,17 @@ public class SubscriptionPanel extends javax.swing.JPanel {
             Subscription s = modelSubscription.byUser(user.getId_user());
             if (s != null) {
                 JOptionPane.showMessageDialog(null, "Plan cambiado con éxito");
-                s.setSubscriptionPlan(plan.getIdSubscriptionPlan());
+                s.setSubscriptionPlan(this.plan.getIdSubscriptionPlan());
                 s.setStart_date(getStartDate());
                 s.setEnd_date(getEndDate());
                 modelSubscription.update(s);
+                Payment payment = new Payment(
+                        null,
+                        s.getId_subscription(),
+                        plan.getPrice(),
+                        getStartDate()
+                );
+                addPayment(payment);
                 new ControlPanelClients(user).setVisible(true);
                 this.parent.dispose();
                 return;
@@ -225,7 +244,7 @@ public class SubscriptionPanel extends javax.swing.JPanel {
 
 
             s = new Subscription(
-                    0,
+                    null,
                     user.getId_user(),
                     getStartDate(),
                     getEndDate(),
@@ -235,34 +254,38 @@ public class SubscriptionPanel extends javax.swing.JPanel {
             // new Payment
             // Añadir para cuando vende alguien
 
+            addSubscription(s);
+            Subscription newSub = modelSubscription.byUser(user.getId_user());
 
             Payment payment = new Payment(
                     null,
-                    s.getId_subscription(),
+                    newSub.getId_subscription(),
                     plan.getPrice(),
                     getStartDate()
             );
 
-            addSubscription(s);
             addPayment(payment);
 
             if(seller != null){
                 Comition comition = new Comition(
                         null,
                         seller.getId_user(),
-                        s.getId_subscription(),
+                        newSub.getId_subscription(),
                         payment.getAmount() * 0.1,
                         getStartDate()
                 );
                 addComition(comition);
                 JOptionPane.showMessageDialog(null, "Plan vendido con éxito");
-                this.parent.dispose();
+                sellerFrame.updateUI();
+
             } else{
                 JOptionPane.showMessageDialog(null, "Plan contratado con éxito");
                 new ControlPanelClients(user).setVisible(true);
-                this.parent.dispose();
+
             }
+            this.parent.dispose();
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error al contratar plan: "+e.getMessage());
             e.printStackTrace();
         }
 

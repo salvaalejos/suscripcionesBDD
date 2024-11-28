@@ -4,7 +4,6 @@
  */
 package Views;
 
-import Views.Admin_Views.ChooseSubscription;
 import Models.Entities.Sucursal;
 import Models.Entities.User;
 import Models.ModelSucursal;
@@ -13,6 +12,8 @@ import Utilities.Authentication;
 import Utilities.Paths;
 import static Utilities.Paths.SUCURSAL_FILE;
 import static Utilities.Paths.USER_FILE;
+
+import Views.Seller_Views.HomeSellerPanel;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.google.gson.Gson;
@@ -36,6 +37,10 @@ public class Register extends javax.swing.JFrame {
     private ArrayList<Sucursal> sucursales = new ArrayList<Sucursal>();
     private ArrayList<Sucursal> sucursalesList = new ArrayList<Sucursal>();
     private User seller = null;
+    private HomeSellerPanel parent = null;
+    
+    private ModelSucursal modelSucursal = new ModelSucursal();
+    private ModelUser modelUser = new ModelUser();
     
     public Register() {
         initComponents();
@@ -57,7 +62,8 @@ public class Register extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
     
-    public Register(User seller){
+    public Register(User seller, HomeSellerPanel parent) {
+        this.parent = parent;
         this.seller = seller;
         initComponents();
         setLocationRelativeTo(null);
@@ -281,7 +287,7 @@ public class Register extends javax.swing.JFrame {
             return;
         }
         
-        if(name == null || username == null || phone == null || email == null){
+        if(name == null || username == null || phone == null || email == null || sucursal == null){
             JOptionPane.showMessageDialog(null,"Por favor llene todos los campos");
             return;
         }
@@ -294,15 +300,16 @@ public class Register extends javax.swing.JFrame {
             
             try {
                 user = new ModelUser().register(userToRegister);
+
+                JOptionPane.showMessageDialog(null,"Usuario registrado con éxito");
+                System.out.println("Nombre usuario: "+user.getName()+"\nSucursal: "+modelSucursal.byUser(user.getSucursal()));
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null,"Error al registrar usuario");
                 e.printStackTrace();
             }
             
-            JOptionPane.showMessageDialog(null,"Usuario registrado con éxito");
-            
             if(seller != null){
-                new ChooseSubscription(user, seller).setVisible(true);
+                new ChooseSubscription(user, seller, parent).setVisible(true);
             } else{
                 new ChooseSubscription(user).setVisible(true);
             }

@@ -104,7 +104,7 @@ public class ClientControlPanel extends javax.swing.JPanel {
             sucursales = modelSucursal.getActives();
 
             for(Sucursal sucursal : sucursales){
-                sucursalSelector.addItem(sucursal.getNombre());
+                sucursalSelector.addItem(sucursal);
             }
             sucursalSelector.updateUI();
         } catch (Exception e) {
@@ -254,9 +254,9 @@ public class ClientControlPanel extends javax.swing.JPanel {
 
     private void btnChangeSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeSucursalActionPerformed
         // TODO add your handling code here:
-        Integer idSucursal = sucursalSelector.getSelectedIndex();
-        Sucursal sucursal = sucursales.get(idSucursal);
-        idSucursal = sucursal.getIdSucursal();
+        
+        Sucursal sucursal = (Sucursal) sucursalSelector.getSelectedItem();
+        Integer idSucursal = sucursal.getIdSucursal();
 
         if(idSucursal == null){
             return;
@@ -324,6 +324,6 @@ public class ClientControlPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JComboBox<String> sucursalSelector;
+    private javax.swing.JComboBox<Sucursal> sucursalSelector;
     // End of variables declaration//GEN-END:variables
 }

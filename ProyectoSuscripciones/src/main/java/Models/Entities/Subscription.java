@@ -9,7 +9,7 @@ package Models.Entities;
  * @author hfyh
  */
 public class Subscription {
-    private int id_subscription;
+    private Integer id_subscription;
     private Integer user;
     private String start_date;
     private String end_date;
@@ -34,7 +34,7 @@ public class Subscription {
         this.subscriptionPlan = subscriptionPlan;
     }
 
-    public int getId_subscription() {
+    public Integer getId_subscription() {
         return id_subscription;
     }
 
